@@ -8,7 +8,7 @@ const srcPath = {
     css: 'src/sass/**/*.scss',
     js: 'src/js/*.js',
     img: 'src/img/**/*',
-    html: '*.html',
+    html: 'src/*.html',
 }
 
 // 吐き出し先（なければ生成される）
@@ -27,7 +27,7 @@ const browserSyncOption = {
         baseDir: "./",
         middleware: [
             connectSSI({
-                baseDir: './',
+                baseDir: './src/',
                 ext: '.html'
             })
         ]

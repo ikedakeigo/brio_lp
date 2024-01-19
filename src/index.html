@@ -1,35 +1,419 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no" />
-  <title>コーディング効率化講座</title>
-  <meta name="description" content="トップページの説明" />
-  <meta name="keywords" content="キーワード" />
-  <!-- ogp -->
-  <meta property="og:title" content="サイト名" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="サイトのドメイン" />
-  <meta property="og:image" content="OGP IMAGE" />
-  <meta property="og:site_name" content="サイトのドメイン" />
-  <meta property="og:description" content="トップページの説明" />
-  <!-- ファビコン -->
-  <link rel="”icon”" href="">
-  <link rel="apple-touch-icon" href="">
-  <!-- CSS -->
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-  <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>ブリオッシュ</title>
+    <meta name="description" content="トップページの説明" />
+    <meta name="keywords" content="キーワード" />
+    <!-- ogp -->
+    <meta property="og:title" content="サイト名" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="サイトのドメイン" />
+    <meta property="og:image" content="OGP IMAGE" />
+    <meta property="og:site_name" content="サイトのドメイン" />
+    <meta property="og:description" content="トップページの説明" />
+    <!-- ファビコン -->
+    <link rel="”icon”" href="" />
+    <link rel="apple-touch-icon" href="" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="header header-layout">
+        <div class="header__inner">
+          <h1 class="header__logo">
+            <a href="#">
+              <img src="" alt="ロゴ" />
+            </a>
+          </h1>
+          <nav class="header__nav">
+            <ul class="header__nav-items">
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link"></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link"></a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link"></a>
+              </li>
+              <li class="header__nav-item header__nav-item--contact">
+                <a href="#" class="header__nav-link"></a>
+              </li>
+            </ul>
+          </nav>
 
-    <a href="#" class="c-btn">view more</a>
-    <!-- Modifier -->
-    <a href="#" class="c-btn c-btn--black">view more</a>
+          <button class="header__hunberger js-hunberger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-  </main>
-  <!-- JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="./js/script.js"></script>
-</body>
+          <div class="header__drawer js-drawer">
+            <nav class="header__drawer-nav">
+              <ul class="header__drawer-nav-items">
+                <li class="header__drawer-nav-item">
+                  <a href="#"></a>
+                </li>
+                <li class="header__drawer-nav-item">
+                  <a href="#"></a>
+                </li>
+                <li class="header__drawer-nav-item">
+                  <a href="#"></a>
+                </li>
+                <li class="header__drawer-nav-item">
+                  <a href="#"></a>
+                </li>
+                <li class="header__drawer-nav-item">
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <section class="mv">
+        <div class="mv__inner">
+          <div class="mv__title-wrap">
+            <h2 class="mv__main-title">
+              <img src="" alt="メインタイトル" />
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="about layout-about">
+        <div class="about__inner">
+          <div class="about__wrap">
+            <div class="about__content">
+              <h2 class="about__title">
+                <span>さくっと、しっとり。</span>
+                <p>
+                  しあわせ <br />
+                  ブリオッシュ。
+                </p>
+              </h2>
+              <p class="about__text">
+                ブリオッシュとはフランス発祥のおやつパンのこと。<br />
+                水ではなく牛乳を使い卵とバターをふんだんに入れるから、<br />
+                甘く香り高いのが特徴です。<br />
+                BRIOのブリオッシュは外はサクサクッ、中はふっくら。<br />
+                二晩かけて炊いたやさしい甘みのあんことバナーのサンドや、茶葉を混ぜ込んだ香り高いブリオッシュなど、<br />
+                お子さまから大人の方まで楽しんでいただけるよう、<br />
+                さまざまな種類のブリオッシュをご用意しております。<br />
+                いつものランチにはもちろん、<br />
+                おでかけや誰かと会う日のちょっとした手土産にも、<br />
+                まいにち美味しいおやつパンをあなたのお供に。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service service__layout">
+        <div class="service__inner">
+          <div class="service__swiper service-swiper">
+            <div class="swiper js-service-swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <img src="./images/common/service01.jpg" alt="省略" />
+                  <h3 class="service__title">
+                    <span>プレーン</span>
+                    <p class="service__subTitle">Plane</p>
+                    <p class="service__price">80 yen</p>
+                  </h3>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu menu__layout">
+        <div class="menu__mv"></div>
+        <div class="menu__inner">
+          <div class="menu__wrap">
+            <div class="menu__content">
+              <div class="menu__items">
+                <!-- Coffee & Espresso -->
+                <div class="menu__category">
+                  <h2 class="menu__category-title">
+                    Coffee&Espresso
+                    <p>コーヒー&エスプレッソ</p>
+                  </h2>
+                  <ul class="menu__list">
+                    <li class="menu__item">
+                      <div class="menu__item-details">
+                        <div class="menu__item-name">
+                          <p class="menu__item-name-en">Drip Coffee</p>
+                          <p class="menu__item-name-jp">ドリップコーヒー</p>
+                          <p class="menu__item-name-stauts">(Hot/Ice)</p>
+                        </div>
+                        <div class="menu__item-options">
+                          <p class="menu__item-size-price">S size 260 yen</p>
+                          <p class="menu__item-size-price">M size 300 yen</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="menu__item">
+                      <div class="menu__item-details">
+                        <div class="menu__item-name">
+                          <p class="menu__item-name-en">Americano</p>
+                          <p class="menu__item-name-jp">アメリカーノ</p>
+                          <p class="menu__item-name-stauts">(Hot/Ice)</p>
+                        </div>
+                        <div class="menu__item-options">
+                          <p class="menu__item-size-price">S size 260 yen</p>
+                          <p class="menu__item-size-price">M size 300 yen</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="menu__item">
+                      <div class="menu__item-details">
+                        <div class="menu__item-name">
+                          <p class="menu__item-name-en">Cafe Latte</p>
+                          <p class="menu__item-name-jp">ブリオラテ</p>
+                          <p class="menu__item-name-stauts">(Hot/Ice)</p>
+                        </div>
+                        <div class="menu__item-options">
+                          <p class="menu__item-size-price">S size 260 yen</p>
+                          <p class="menu__item-size-price">M size 300 yen</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="menu__item">
+                      <div class="menu__item-details">
+                        <div class="menu__item-name">
+                          <p class="menu__item-name-en">Cappuccino</p>
+                          <p class="menu__item-name-jp">カプチーノ</p>
+                          <p class="menu__item-name-stauts">(Hot/Ice)</p>
+                        </div>
+                        <div class="menu__item-options">
+                          <p class="menu__item-size-price">S size 260 yen</p>
+                          <p class="menu__item-size-price">M size 300 yen</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="menu__item">
+                      <div class="menu__item-details">
+                        <div class="menu__item-name">
+                          <p class="menu__item-name-en">Matcha Coffee Latte</p>
+                          <p class="menu__item-name-jp">抹茶コーヒーラテ</p>
+                          <p class="menu__item-name-stauts">(Hot/Ice)</p>
+                        </div>
+                        <div class="menu__item-options">
+                          <p class="menu__item-size-price">S size 260 yen</p>
+                          <p class="menu__item-size-price">M size 300 yen</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="menu__item">
+                      <div class="menu__item-details">
+                        <div class="menu__item-name">
+                          <p class="menu__item-name-en">Caramel Macchiato</p>
+                          <p class="menu__item-name-jp">キャラメルマキアート</p>
+                          <p class="menu__item-name-stauts">(Hot/Ice)</p>
+                        </div>
+                        <div class="menu__item-options">
+                          <p class="menu__item-size-price">S size 260 yen</p>
+                          <p class="menu__item-size-price">M size 300 yen</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Tea -->
+                <div class="menu__category">
+                  <h2 class="menu__category-title">
+                    Tea
+                    <p>紅茶</p>
+                  </h2>
+                  <ul class="menu__list">
+                    <li class="menu__item">
+                      <div class="menu__item-details">
+                        <div class="menu__item-name">
+                          <p class="menu__item-name-en">Earl Gray</p>
+                          <p class="menu__item-name-jp">アールグレイ</p>
+                          <p class="menu__item-name-stauts">(Hot/Ice)</p>
+                        </div>
+                        <div class="menu__item-options">
+                          <p class="menu__item-size-price">S size 260 yen</p>
+                          <p class="menu__item-size-price">M size 300 yen</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="menu__item">
+                      <div class="menu__item-details">
+                        <div class="menu__item-name">
+                          <p class="menu__item-name-en">Milk Tea</p>
+                          <p class="menu__item-name-jp">ミルクティ</p>
+                          <p class="menu__item-name-stauts">(Hot/Ice)</p>
+                        </div>
+                        <div class="menu__item-options">
+                          <p class="menu__item-size-price">S size 260 yen</p>
+                          <p class="menu__item-size-price">M size 300 yen</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Other -->
+                <div class="menu__category">
+                  <h2 class="menu__category-title">
+                    Other
+                    <p>その他</p>
+                  </h2>
+                  <ul class="menu__list">
+                    <li class="menu__item">
+                      <div class="menu__item-details">
+                        <div class="menu__item-name">
+                          <p class="menu__item-name-en">Matcha Latte</p>
+                          <p class="menu__item-name-jp">抹茶ラテ</p>
+                          <p class="menu__item-name-stauts">(Hot/Ice)</p>
+                        </div>
+                        <div class="menu__item-options">
+                          <p class="menu__item-size-price">S size 260 yen</p>
+                          <p class="menu__item-size-price">M size 300 yen</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="menu__item">
+                      <div class="menu__item-details">
+                        <div class="menu__item-name">
+                          <p class="menu__item-name-en">Hojicha Latte</p>
+                          <p class="menu__item-name-jp">ほうじ茶ラテ</p>
+                          <p class="menu__item-name-stauts">(Hot/Ice)</p>
+                        </div>
+                        <div class="menu__item-options">
+                          <p class="menu__item-size-price">S size 260 yen</p>
+                          <p class="menu__item-size-price">M size 300 yen</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="menu__item">
+                      <div class="menu__item-details">
+                        <div class="menu__item-name">
+                          <p class="menu__item-name-en">Milk</p>
+                          <p class="menu__item-name-jp">ミルク</p>
+                          <p class="menu__item-name-stauts">(Hot/Ice)</p>
+                        </div>
+                        <div class="menu__item-options">
+                          <p class="menu__item-size-price">S size 260 yen</p>
+                          <p class="menu__item-size-price">M size 300 yen</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sns sns__layout">
+        <div class="sns__inner">
+          <div class="sns__wrap">
+            <h2 class="sns__title"></h2>
+            <div class="sns__content"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="access access__layout">
+        <div class="access__inner">
+          <div class="access__wrap">
+            <h2 class="access__title"></h2>
+            <div class="access__content">
+              <div class="access__map"></div>
+              <div class="access__info">
+                <ul class="access__info-list">
+                  <li class="access__info-item">
+                    <div class="access__info-item-icon">
+                      <img src="" alt="電車" />
+                    </div>
+                    <div class="access__info-item-text">
+                      <p class="access__info-item-text-title">●電車でお越しのお客様</p>
+                      <p class="access__info-item-text-content">
+                        大阪メトロ長堀鶴見緑地線 <br />
+                        「今福鶴見」駅 2番出口から 徒歩 約 5 分（約400m）
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="access__info-item">
+                    <div class="access__info-item-icon">
+                      <img src="" alt="バス" />
+                    </div>
+                    <div class="access__info-item-text">
+                      <p class="access__info-item-text-title">●バスでお越しのお客様</p>
+                      <p class="access__info-item-text-content">
+                        大阪市営バス <br />
+                        「今福大橋」停留所から 徒歩 約 3 分（約300m）
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="access__contact">
+                <a href="#" class="">
+                  <h2>
+                    <span>お問い合わせはこちら</span>
+                    <span> 03-1234-5678 </span>
+                  </h2>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer footer__layout">
+        <div class="footer__inner">
+          <div class="footer__wrap">
+            <div class="footer__logo">
+              <a href="">
+                <img src="" alt="ロゴ" />
+              </a>
+              <p class="footer__logo-text">
+                〒536-0002 <br />
+                大阪府大阪市城東区今福東1-7-5
+              </p>
+            </div>
+            <div class="footer__info">
+              <div class="footer__business-hours">
+                <p class="footer__title">営業時間：</p>
+                <p class="footer__text">平日 10:00～17:00<br />土曜日 09:00～17:00<br />※バタバタなくなり次第終了</p>
+              </div>
+              <div class="footer__holidays">
+                <p class="footer__title">定休日：</p>
+                <p class="footer__text">日曜日、月曜日</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <small class="footer__copyright">
+          Copyright ©  BRIO All rights reserved.
+        </small>
+      </footer>
+    </main>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
