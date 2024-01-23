@@ -1,2 +1,9 @@
 @use "l-dummy";
+@use "layout-header";
+@use "layout-about";
+@use "layout-service";
+@use "layout-menu";
+@use "layout-sns";
+@use "layout-access";
+@use "layout-footer";
 // 新規scssファイルは都度追記する

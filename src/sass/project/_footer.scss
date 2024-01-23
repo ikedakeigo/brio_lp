@@ -1,0 +1,76 @@
+@use "../foundation" as *;
+
+.footer {
+  background-color: #706663;
+  @include mq(md){
+    padding-top: rem(60);
+    padding-bottom: rem(77);
+  }
+}
+
+.footer__inner {
+}
+
+.footer__wrap {
+  color: $color-white;
+  @include mq(md){
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.footer__logo {
+  @include mq(md){
+    width: per(250, 1200);
+  }
+  a {
+    display: block;
+
+    img {
+      aspect-ratio: 230/100;
+      object-fit: cover;
+      height: auto;
+    }
+  }
+}
+
+.footer__logo-text{
+  margin-top: rem(24);
+}
+
+.footer__info{
+
+}
+
+.footer__business-hours{
+  display: flex;
+}
+
+.footer__title{
+
+}
+
+.footer__text{
+
+}
+
+.footer__holidays{
+  display: flex;
+
+}
+.footer__copyright-box{
+  background-color: $color-black;
+  text-align: center;
+  @include mq(md){
+    padding-top: rem(21);
+    padding-bottom: rem(24);
+  }
+}
+.footer__copyright{
+  color: $color-white;
+  @include mq(md){
+    font-size: rem(16);
+    line-height: calc(29 / 16);
+  }
+}

@@ -1,0 +1,6 @@
+@use '../foundation' as *;
+
+.u-border{
+  margin: rem(11.5) 0;
+  border-bottom: 1px solid $color-white;
+}

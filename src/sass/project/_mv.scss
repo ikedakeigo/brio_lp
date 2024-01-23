@@ -1,0 +1,22 @@
+@use '../foundation' as *;
+
+.mv{
+  background-image: url(../img/mv/mv_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.mv__main-title{
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  img {
+    aspect-ratio: 535/233;
+    object-fit: cover;
+    height: auto;
+  }
+}

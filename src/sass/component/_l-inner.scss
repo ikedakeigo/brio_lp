@@ -1,0 +1,12 @@
+@use '../foundation' as *;
+
+.inner{
+  max-width: rem(600);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0  rem(20);
+  @include mq(md){
+    max-width: rem(1200);
+    padding: 0 rem(25);
+  }
+}

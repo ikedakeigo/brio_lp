@@ -1,0 +1,46 @@
+@use "../foundation" as *;
+
+.sns{
+
+}
+
+
+.sns__inner{
+  padding: 0;
+}
+
+.sns__wrap{
+
+}
+
+.sns__title{
+
+}
+
+.sns__content{
+  text-align: center;
+  @include mq(md){
+    margin-top: rem(50);
+  }
+}
+
+.sns__list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include mq(md){
+    margin-bottom: rem(50);
+  }
+
+}
+
+.sns__item{
+
+  @include mq(md){
+    margin-bottom: rem(10);
+  }
+  img{
+
+  }
+}

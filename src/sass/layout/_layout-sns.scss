@@ -1,0 +1,9 @@
+@use '../foundation' as *;
+
+.layout-sns {
+
+  @include mq(md){
+    padding-top: rem(160);
+    padding-bottom: rem(160);
+  }
+}

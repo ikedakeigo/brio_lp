@@ -1,0 +1,82 @@
+@use "../foundation" as *;
+
+.service {
+  background-image: url(../img/service/service_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service__mainTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include mq(md){
+    width: per(1150, 1920);
+  }
+}
+.service__mainTitle img {
+  aspect-ratio: 1150/230;
+  object-fit: cover;
+  height: auto;
+}
+
+.service__swiper{
+
+}
+
+.service__items{
+  justify-content: center;
+  @include mq(md){
+    // width: per(484, 1920);
+    margin-top: auto;
+  }
+}
+
+.service__item{
+
+  @include mq(md){
+    width: per(484, 1920);
+  }
+  img {
+    aspect-ratio: 485/490;
+    object-fit: cover;
+    height: auto;
+  }
+}
+
+.service__title{
+  color: $color-white;
+  text-align: center;
+
+  @include mq(md){
+    margin-top: rem(70);
+    span {
+      font-size: rem(43);
+      line-height: calc(52 / 43);
+    }
+  }
+}
+
+.service__subTitle{
+
+  @include mq(md){
+    margin-bottom: rem(26);
+    font-size:  rem(23);
+    line-height: calc(28 / 23);
+  }
+}
+
+.service__price{
+
+  @include mq(md){
+    font-size:  rem(33);
+    line-height: calc(40 / 33);
+  }
+}
