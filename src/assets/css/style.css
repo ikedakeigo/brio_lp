@@ -185,6 +185,7 @@ a {
   background-color: #fff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  font-family: "Yu Gothic";
 }
 
 @media screen and (min-width: 768px) {
@@ -258,6 +259,7 @@ a {
 .main-title {
   font-weight: 500;
   text-align: center;
+  font-family: "Raleway";
 }
 @media screen and (min-width: 768px) {
   .main-title {
@@ -267,12 +269,28 @@ a {
 }
 
 .mv {
-  background-image: url(../img/mv/mv_bg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
   position: relative;
+  z-index: 1;
+  height: 100vh;
+  min-height: 400px;
+  min-height: 25rem;
+}
+
+.mv__inner {
+  height: inherit;
+  min-height: inherit;
+}
+
+.mv__title-wrap {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  color: #fff;
+  text-align: center;
 }
 
 .mv__main-title {
@@ -289,9 +307,63 @@ a {
   height: auto;
 }
 
+.mv__sub-title {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .mv__sub-title {
+    font-size: 2.8125rem;
+  }
+}
+
+.mv__swiper,
+.mv__swiper .swiper-img,
+.mv__swiper .swiper-img img {
+  height: inherit;
+  min-height: inherit;
+}
+
+.mv__swiper .swiper-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mv__swiper .swiper-slide.swiper-slide-active .swiper-img,
+.mv__swiper .swiper-slide.swiper-slide-duplicate-active .swiper-img,
+.mv__swiper .swiper-slide.swiper-slide-prev .swiper-img {
+  -webkit-animation: scale 8s linear 0s normal both;
+          animation: scale 8s linear 0s normal both;
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
 .header {
   height: 40px;
   height: 2.5rem;
+  font-family: "Raleway";
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -365,7 +437,8 @@ a {
 .header__nav-item {
   height: inherit;
 }
-.header__nav-item .header__nav-item--contact {
+
+.header__nav-item--contact a {
   margin-left: 15px;
   margin-left: 0.9375rem;
   display: -webkit-box;
@@ -374,6 +447,15 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 80px;
+  width: 5rem;
+}
+
+.header__nav-link img {
+  aspect-ratio: 32/32;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
 }
 
 .header__nav-item a {
@@ -513,6 +595,7 @@ a {
 
 .about {
   background-color: #241915;
+  font-family: "游ゴシック体";
 }
 
 @media screen and (min-width: 768px) {
@@ -556,12 +639,9 @@ a {
 }
 
 .service {
-  background-image: url(../img/service/service_bg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-color: #241915;
   position: relative;
+  z-index: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -571,6 +651,20 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "A-OTF Futo Go B101 Pro";
+}
+.service::before {
+  content: "";
+  background-image: url(../img/service/service_bg.png);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .service__mainTitle {
@@ -591,10 +685,30 @@ a {
   height: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .service__swiper {
+    margin-top: 22.8125rem;
+  }
+}
+
+.service__item-img-box img {
+  width: auto; /* 幅は自動調整 */
+  height: 100%; /* 高さをコンテナと同じに設定 */
+  -o-object-fit: cover;
+     object-fit: cover; /* 画像をトリミングせずにコンテナに収める */
+}
+
 .service__items {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; /* 水平方向に要素を並べる */
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; /* 子要素の高さを揃える */
 }
 @media screen and (min-width: 768px) {
   .service__items {
@@ -602,13 +716,21 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .service__item {
-    width: 25.2083333333%;
-  }
+.service__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* フレックスボックスを使って内容を整理 */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; /* 縦方向に要素を並べる */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; /* 内容を均等に分散 */
+  height: auto; /* 高さは自動調整 */
+  margin-top: auto;
 }
 .service__item img {
-  aspect-ratio: 485/490;
   -o-object-fit: cover;
      object-fit: cover;
   height: auto;
@@ -643,24 +765,139 @@ a {
   }
 }
 
-.menu {
+.service-swiper {
   position: relative;
+}
+
+.service-swiper .swiper-slide {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0.7;
+}
+.service-swiper .swiper-slide .service__title {
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.service-swiper .swiper-slide-active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  position: relative;
+}
+.service-swiper .swiper-slide-active .service__title {
+  opacity: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.service-swiper .service-swiper img {
+  width: 100%;
+  aspect-ratio: 300/180;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.service-swiper .swiper-pagination {
+  top: 50%;
+  right: 10px;
+  right: 0.625rem;
+  left: auto;
+  left: initial;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   z-index: 0;
 }
 
-.menu__mv {
+.service-swiper .swiper-pagination .swiper-pagination-bullet {
+  border: 1px solid #241915;
+  background: #fff;
+}
+.service-swiper .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: none;
+  color: transparent;
+  position: absolute;
+  top: 50%; /* 垂直中央に配置 */
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); /* Y軸方向の中央揃え */
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+  background-image: url("/src/assets/img/swiper/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  width: 2.5rem; /* 幅を設定 */
+  height: 40px;
+  height: 2.5rem; /* 高さを設定 */
+  position: absolute;
+  top: 0;
+}
+
+.swiper-button-next::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.swiper-button-prev {
+  left: 30%; /* コンテナの左側に配置 */
+}
+
+.swiper-button-next {
+  right: 30%; /* コンテナの右側に配置 */
+}
+
+.menu {
+  position: relative;
+  z-index: 0;
+  background-color: #241915;
+  font-family: "A-OTF Futo Go B101 Pro";
+}
+.menu::before {
+  content: "";
   background-image: url(../img/menu/menu_bg.png);
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
   position: absolute;
   z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.menu__mv {
+  position: absolute;
+  z-index: -1;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  margin-top: -450px;
-  margin-top: -28.125rem;
 }
 
 .menu__mainTitle {
@@ -682,21 +919,12 @@ a {
   height: auto;
 }
 
-.menu__wrap {
-  background-color: #241915;
-}
-@media screen and (min-width: 768px) {
-  .menu__wrap {
-    margin-top: 28.125rem;
-  }
-}
-
 .menu__items {
   color: #fff;
 }
 @media screen and (min-width: 768px) {
   .menu__items {
-    padding-top: 11rem;
+    padding-top: 45.75rem;
     padding-bottom: 10.1875rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -792,7 +1020,23 @@ a {
   }
 }
 .access {
+  position: relative;
+  z-index: 0;
   background-color: #D6D1D0;
+  font-family: "A-OTF Futo Go B101 Pro";
+}
+.access::before {
+  content: "";
+  background-image: url(../img/access/access_bg.png);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 @media screen and (min-width: 768px) {
   .access {
@@ -801,6 +1045,9 @@ a {
   }
 }
 
+.access__title {
+  color: #fff;
+}
 @media screen and (min-width: 768px) {
   .access__title {
     margin-bottom: 3.8125rem;
@@ -878,6 +1125,7 @@ a {
   color: #fff;
   text-align: center;
   border-radius: 10px;
+  font-family: "Helvetica";
 }
 @media screen and (min-width: 768px) {
   .access__contact {
@@ -886,6 +1134,9 @@ a {
 }
 .access__contact a h2 {
   display: inline-grid;
+}
+.access__contact a h2 .s {
+  font-family: "A-OTF Futo Go B101 Pro";
 }
 @media screen and (min-width: 768px) {
   .access__contact a h2 .s {

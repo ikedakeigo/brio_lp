@@ -1,16 +1,32 @@
 @use "../foundation" as *;
 
 .service {
-  background-image: url(../img/service/service_bg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+  // background-image: url(../img/service/service_bg.png);
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // height: 100vh;
+  background-color: #241915;
   position: relative;
-
+  z-index: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  font-family: $font-family-02;
+  &::before{
+    content: "";
+    background-image: url(../img/service/service_bg.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .service__mainTitle {
@@ -29,10 +45,25 @@
 
 .service__swiper{
 
+  @include mq(md){
+    margin-top: rem(365);
+  }
+}
+
+.service__item-img-box{
+  img{
+    width: auto; /* 幅は自動調整 */
+    height: 100%; /* 高さをコンテナと同じに設定 */
+    object-fit: cover; /* 画像をトリミングせずにコンテナに収める */
+
+  }
 }
 
 .service__items{
-  justify-content: center;
+  display: flex;
+    flex-direction: row; /* 水平方向に要素を並べる */
+    align-items: stretch; /* 子要素の高さを揃える */
+
   @include mq(md){
     // width: per(484, 1920);
     margin-top: auto;
@@ -40,12 +71,12 @@
 }
 
 .service__item{
-
-  @include mq(md){
-    width: per(484, 1920);
-  }
+  display: flex; /* フレックスボックスを使って内容を整理 */
+  flex-direction: column; /* 縦方向に要素を並べる */
+  justify-content: space-between; /* 内容を均等に分散 */
+  height: auto; /* 高さは自動調整 */
+  margin-top: auto;
   img {
-    aspect-ratio: 485/490;
     object-fit: cover;
     height: auto;
   }

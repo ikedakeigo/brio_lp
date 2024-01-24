@@ -85,6 +85,25 @@
               <img src="src/assets/img/mv/mv_title.png" alt="メインタイトル" />
             </h2>
           </div>
+          <div class="mv__swiper swiper js-mv-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-img">
+                  <img src="src/assets/img/mv/mv01.png" alt="メインビジュアル" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-img">
+                  <img src="src/assets/img/mv/mv02.png" alt="メインビジュアル" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-img">
+                  <img src="src/assets/img/mv/mv03.png" alt="メインビジュアル" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -123,18 +142,10 @@
             <img src="src/assets/img/service/service_title.png" alt="" />
           </h2>
           <div class="service__swiper service-swiper">
-            <div class="swiper jjs-service-swiper">
+            <div class="swiper js-service-swiper">
               <ul class="swiper-wrapper service__items">
                 <li class="swiper-slide service__item">
-                  <img src="src/assets/img/service/service02.png" alt="省略" />
-                  <h3 class="service__title">
-                    <span>プレーン</span>
-                    <p class="service__subTitle">Plane</p>
-                    <p class="service__price">80 yen</p>
-                  </h3>
-                </li>
-                <!-- <li class="swiper-slide service__item">
-                  <img src="src/assets/img/service/service02.png" alt="省略" />
+                  <div class="service__item-img-box"><img src="src/assets/img/service/service01.png" alt="省略" /></div>
                   <h3 class="service__title">
                     <span>プレーン</span>
                     <p class="service__subTitle">Plane</p>
@@ -142,14 +153,26 @@
                   </h3>
                 </li>
                 <li class="swiper-slide service__item">
-                  <img src="src/assets/img/service/service03.png" alt="省略" />
+                  <div class="service__item-img-box"><img src="src/assets/img/service/service02.png" alt="省略" /></div>
                   <h3 class="service__title">
-                    <span>プレーン</span>
-                    <p class="service__subTitle">Plane</p>
-                    <p class="service__price">80 yen</p>
+                    <span>ピスタチオ</span>
+                    <p class="service__subTitle">pisutatio</p>
+                    <p class="service__price">250 yen</p>
                   </h3>
-                </li> -->
+                </li>
+                <li class="swiper-slide service__item">
+                  <div class="service__item-img-box"><img src="src/assets/img/service/service03.png" alt="省略" /></div>
+                  <h3 class="service__title">
+                    <span>アールグレイ</span>
+                    <p class="service__subTitle">Earlgray</p>
+                    <p class="service__price">90 yen</p>
+                  </h3>
+                </li>
               </ul>
+
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -366,7 +389,6 @@
                     </li>
 
                     <div class="u-border"></div>
-
                   </ul>
                 </div>
               </div>
@@ -378,31 +400,31 @@
       <section class="sns layout-sns">
         <div class="sns__inner inner">
           <div class="sns__wrap">
-            <h2 class="sns__title main-title">
-              Instagram
-            </h2>
+            <h2 class="sns__title main-title">Instagram</h2>
             <div class="sns__content">
               <ul class="sns__list">
                 <li class="sns__item">
-                  <img src="https://placehold.jp/390x390.png" alt="">
+                  <img src="https://placehold.jp/390x390.png" alt="" />
                 </li>
                 <li class="sns__item">
-                  <img src="https://placehold.jp/390x390.png" alt="">
+                  <img src="https://placehold.jp/390x390.png" alt="" />
                 </li>
                 <li class="sns__item">
-                  <img src="https://placehold.jp/390x390.png" alt="">
+                  <img src="https://placehold.jp/390x390.png" alt="" />
                 </li>
                 <li class="sns__item">
-                  <img src="https://placehold.jp/390x390.png" alt="">
+                  <img src="https://placehold.jp/390x390.png" alt="" />
                 </li>
                 <li class="sns__item">
-                  <img src="https://placehold.jp/390x390.png" alt="">
+                  <img src="https://placehold.jp/390x390.png" alt="" />
                 </li>
                 <li class="sns__item">
-                  <img src="https://placehold.jp/390x390.png" alt="">
+                  <img src="https://placehold.jp/390x390.png" alt="" />
                 </li>
               </ul>
-              <p><a href="#" class="btn"><span>もっと見る</span></a></p>
+              <p>
+                <a href="#" class="btn"><span>もっと見る</span></a>
+              </p>
             </div>
           </div>
         </div>
@@ -414,7 +436,7 @@
             <h2 class="access__title main-title">Access</h2>
             <div class="access__content">
               <div class="access__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207763.07103716696!2d139.41831505122724!3d35.5463421778204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1688630714995!5m2!1sja!2sjp" width="1200" height="658" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207763.07103716696!2d139.41831505122724!3d35.5463421778204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1688630714995!5m2!1sja!2sjp" width="1150" height="658" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
               <div class="access__info">
                 <ul class="access__info-list">

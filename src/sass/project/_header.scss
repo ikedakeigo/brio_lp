@@ -2,6 +2,7 @@
 
 .header {
   height: rem(40);
+  font-family: $font-family-title;
   @include mq(md) {
     height: rem(60);
   }
@@ -54,10 +55,20 @@
 .header__nav-item {
   height: inherit;
 
-  .header__nav-item--contact {
-    margin-left: rem(15);
-    display: flex;
-    align-items: center;
+}
+.header__nav-item--contact a {
+  margin-left: rem(15);
+  display: flex;
+  align-items: center;
+  width: rem(80);
+}
+
+.header__nav-link{
+
+  img{
+    aspect-ratio: 32/32;
+    object-fit: cover;
+    height: auto;
   }
 }
 

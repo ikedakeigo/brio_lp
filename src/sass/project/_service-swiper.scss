@@ -1,0 +1,88 @@
+@use "../foundation" as *;
+
+.service-swiper {
+  position: relative;
+}
+
+.service-swiper .swiper-slide {
+  transform: scale(.7);
+  transition: 1s;
+  opacity: .7;
+
+  .service__title{
+    opacity: 0;
+    transition: all .5s;
+  }
+}
+
+.service-swiper .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+  position: relative;
+  .service__title{
+    opacity:  1;
+    transition: all .5s;
+  }
+}
+
+.service-swiper .service-swiper img {
+  width: 100%;
+  aspect-ratio: 300/180;
+  object-fit: cover;
+}
+
+.service-swiper .swiper-pagination {
+  top: 50%;
+  right: rem(10);
+  left: initial;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+
+  z-index: 0;
+}
+
+.service-swiper .swiper-pagination .swiper-pagination-bullet {
+  border: 1px solid $color-black;
+  background: $color-white;
+  &:not(:last-child) {
+    margin-bottom: rem(32);
+  }
+}
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    background: none;
+    color: transparent;
+    position: absolute;
+    top: 50%; /* 垂直中央に配置 */
+    transform: translateY(-50%); /* Y軸方向の中央揃え */
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    content: '';
+    background-image: url('/src/assets/img/swiper/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(40);  /* 幅を設定 */
+    height: rem(40); /* 高さを設定 */
+    position: absolute;
+    top: 0;
+}
+
+.swiper-button-next::after {
+    transform: rotate(180deg);
+}
+
+.swiper-button-prev {
+    left: 30%; /* コンテナの左側に配置 */
+}
+
+.swiper-button-next {
+    right: 30%; /* コンテナの右側に配置 */
+}
