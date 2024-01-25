@@ -2,6 +2,8 @@
 
 .footer {
   background-color: #706663;
+  font-family: $font-family-02;
+  font-weight: bold;
   @include mq(md){
     padding-top: rem(60);
     padding-bottom: rem(77);
@@ -22,7 +24,7 @@
 
 .footer__logo {
   @include mq(md){
-    width: per(250, 1200);
+    width: per(356, 1200);
   }
   a {
     display: block;
@@ -40,12 +42,21 @@
 }
 
 .footer__info{
-
+  @include mq(md){
+    width: per(356, 1200);
+  }
 }
 
 .footer__business-hours{
   display: flex;
+  justify-content: space-between;
+  text-align: right;
 }
+// .footer__business-hours--sa{
+//   display: flex;
+//   justify-content: space-between;
+//   text-align: right;
+// }
 
 .footer__title{
 
@@ -53,11 +64,15 @@
 
 .footer__text{
 
+  small{
+    font-size: rem(12);
+    line-height: calc(29 / 12);
+  }
 }
 
 .footer__holidays{
   display: flex;
-
+  justify-content: space-between;
 }
 .footer__copyright-box{
   background-color: $color-black;

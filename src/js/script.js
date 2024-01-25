@@ -4,6 +4,8 @@ jQuery(function ($) {
         speed: 1000,
         slidesPerView: 1,
         centeredSlides: true,
+        // spaceBetween: 60,
+
         autoplay: {
             delay: 2000,
             disableOnInteraction: false,

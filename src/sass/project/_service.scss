@@ -1,11 +1,6 @@
 @use "../foundation" as *;
 
 .service {
-  // background-image: url(../img/service/service_bg.png);
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // height: 100vh;
   background-color: #241915;
   position: relative;
   z-index: 0;
@@ -46,11 +41,13 @@
 .service__swiper{
 
   @include mq(md){
-    margin-top: rem(365);
+    margin-top: rem(180);
+    margin-bottom: rem(160);
   }
 }
 
 .service__item-img-box{
+
   img{
     width: auto; /* 幅は自動調整 */
     height: 100%; /* 高さをコンテナと同じに設定 */
@@ -71,6 +68,7 @@
 }
 
 .service__item{
+  // width: rem(484);
   display: flex; /* フレックスボックスを使って内容を整理 */
   flex-direction: column; /* 縦方向に要素を並べる */
   justify-content: space-between; /* 内容を均等に分散 */
