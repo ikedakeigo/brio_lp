@@ -1,0 +1,47 @@
+@use '../foundation' as *;
+
+#luxy {
+  /* position:  relative !important; */
+}
+
+.luxy-el {
+  position: absolute;
+}
+
+.luxy-img01 {
+  bottom:  rem(750);
+  right: 3%;
+  width:  rem(160);
+  @include mq(md){
+    bottom:  rem(1150);
+    width: rem(322);
+  }
+}
+
+.luxy-img02 {
+  bottom:  rem(650);
+  left: 5%;
+  width:  rem(50);
+  @include mq(md){
+    width: rem(100);
+  }
+}
+
+.luxy-img03 {
+  top:  rem(-200);
+  right: 10%;
+  width:  rem(60);
+  @include mq(md){
+    width: rem(120);
+  }
+}
+
+.luxy-img04 {
+  top:  rem(-300);
+  left: -25%;
+  width:  rem(300);
+  @include mq(md){
+    left: -15%;
+    width:  rem(590);
+  }
+}
