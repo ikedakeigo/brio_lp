@@ -4,10 +4,6 @@
   background-color: #706663;
   font-family: $font-family-02;
   font-weight: bold;
-  @include mq(md){
-    padding-top: rem(60);
-    padding-bottom: rem(77);
-  }
 }
 
 .footer__inner {
@@ -23,17 +19,27 @@
 }
 
 .footer__logo {
+  margin-bottom: rem(50);
   @include mq(md){
-    width: per(356, 1200);
+    margin-bottom: rem(0);
   }
+
+}
+
+.footer__logo-img{
+  width: per(230, 390);
+
   a {
     display: block;
-
     img {
       aspect-ratio: 230/100;
       object-fit: cover;
       height: auto;
     }
+  }
+
+  @include mq(md){
+    width: per(356, 1200);
   }
 }
 
@@ -49,8 +55,10 @@
 
 .footer__business-hours{
   display: flex;
-  justify-content: space-between;
-  text-align: right;
+  @include mq(md){
+    justify-content: space-between;
+    text-align: right;
+  }
 }
 // .footer__business-hours--sa{
 //   display: flex;
@@ -72,11 +80,15 @@
 
 .footer__holidays{
   display: flex;
-  justify-content: space-between;
+  @include mq(md){
+    justify-content: space-between;
+  }
 }
 .footer__copyright-box{
   background-color: $color-black;
   text-align: center;
+  padding-top: rem(23);
+  padding-bottom: rem(26);
   @include mq(md){
     padding-top: rem(21);
     padding-bottom: rem(24);
@@ -84,6 +96,7 @@
 }
 .footer__copyright{
   color: $color-white;
+  font-size:  rem(12);
   @include mq(md){
     font-size: rem(16);
     line-height: calc(29 / 16);

@@ -4,8 +4,9 @@
     position: fixed;
     z-index: 900;
     top: 0;
-    right: 0;
     left: 0;
-    margin-top: rem(62.7);
+    right: 0;
+    @include mq(md){
+        margin-top: rem(62.7);
+    }
 }
-

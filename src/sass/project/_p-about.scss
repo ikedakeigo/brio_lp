@@ -6,7 +6,8 @@
 }
 
 .about__inner{
-
+  padding-top: rem(124);
+  padding-bottom: rem(230);
   @include mq(md){
     padding-top: rem(255);
     padding-bottom: rem(255);
@@ -17,17 +18,16 @@
 .about__content{
   color: $color-white;
   text-align: center;
-
-
-
 }
 
 .about__title {
-
+  margin-bottom: rem(53);
   @include mq(md){
     margin-bottom: rem(81);
   }
   & span.m {
+    font-size:  rem(24);
+    line-height: calc(56 / 24);
     @include mq(md){
       font-size:  rem(56);
       line-height: calc(130 / 56);
@@ -35,6 +35,8 @@
   }
 
   & span.l {
+    font-size:  rem(35);
+    line-height: calc(56 / 35);
     @include mq(md){
       font-size:  rem(81);
       line-height: calc(130 /81 );
@@ -44,6 +46,8 @@
 
 .about__text{
   font-weight: normal;
+  font-size:  rem(14);
+  line-height: calc(32 / 14);
   @include mq(md){
     font-size:  rem(22);
     line-height: calc(55 / 22);

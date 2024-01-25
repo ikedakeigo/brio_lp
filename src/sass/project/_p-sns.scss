@@ -19,6 +19,7 @@
 
 .sns__content{
   text-align: center;
+  margin-top: rem(33);
   @include mq(md){
     margin-top: rem(50);
   }
@@ -28,7 +29,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
+  margin-bottom: rem(31);
   @include mq(md){
     margin-bottom: rem(50);
   }
@@ -36,11 +37,11 @@
 }
 
 .sns__item{
-
+  width: per(128, 390);
+  margin-bottom: rem(5);
   @include mq(md){
+    width: per(390, 1920);
     margin-bottom: rem(10);
   }
-  img{
 
-  }
 }

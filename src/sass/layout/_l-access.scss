@@ -1,0 +1,10 @@
+@use '../foundation' as *;
+
+.layout-access {
+  padding-top: rem(54);
+  padding-bottom: rem(60);
+  @include mq(md) {
+    padding-top: rem(125);
+    padding-bottom: rem(110);
+  }
+}

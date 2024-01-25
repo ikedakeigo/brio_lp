@@ -1,9 +1,10 @@
 @use "l-dummy";
-@use "layout-header";
-@use "layout-about";
-@use "layout-service";
-@use "layout-menu";
-@use "layout-sns";
-@use "layout-access";
-@use "layout-footer";
+@use "l-header";
+@use "l-about";
+@use "l-service";
+@use "l-menu";
+@use "l-sns";
+@use "l-access";
+@use "l-footer";
+@use "l-inner";
 // 新規scssファイルは都度追記する

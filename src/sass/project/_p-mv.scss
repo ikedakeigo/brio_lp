@@ -3,8 +3,11 @@
 .mv {
   position: relative;
   z-index: 1;
-  height: 100vh;
+  height: 75vh;
   min-height: rem(400);
+  @include mq(md){
+    height: 100vh;
+  }
 }
 
 .mv__inner {

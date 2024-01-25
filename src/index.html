@@ -47,7 +47,7 @@
             </ul>
           </nav>
 
-          <!-- <button class="header__hunberger js-hunberger">
+          <button class="header__hunberger js-humburger">
             <span></span>
             <span></span>
             <span></span>
@@ -55,25 +55,27 @@
 
           <div class="header__drawer js-drawer">
             <nav class="header__drawer-nav">
-              <ul class="header__drawer-nav-items">
-                <li class="header__drawer-nav-item">
-                  <a href="#"></a>
+              <ul class="header__drawer-items">
+                <li class="header__drawer-item">
+                  <a href="#consept">CONCEPT</a>
                 </li>
-                <li class="header__drawer-nav-item">
-                  <a href="#"></a>
+                <li class="header__drawer-item">
+                  <a href="#lineup">LINEUP</a>
                 </li>
-                <li class="header__drawer-nav-item">
-                  <a href="#"></a>
+                <li class="header__drawer-item">
+                  <a href="#instagram">Instagram</a>
                 </li>
-                <li class="header__drawer-nav-item">
-                  <a href="#"></a>
+                <li class="header__drawer-item">
+                  <a href="#access">ACCESS</a>
                 </li>
-                <li class="header__drawer-nav-item">
-                  <a href="#"></a>
+                <li class="header__drawer-item header__drawer-item--contact">
+                  <a href="#" target="_blank" rel="noopener">
+                    <img src="src/assets/img/header/instagram_logo.svg" alt="Instagram" />
+                  </a>
                 </li>
               </ul>
             </nav>
-          </div> -->
+          </div>
         </div>
       </header>
 
@@ -137,10 +139,10 @@
       </section>
 
       <section class="service layout-service" id="lineup">
+        <h2 class="service__mainTitle">
+          <img src="src/assets/img/service/service_title.png" alt="" />
+        </h2>
         <div class="service__inner inner">
-          <h2 class="service__mainTitle">
-            <img src="src/assets/img/service/service_title.png" alt="" />
-          </h2>
           <div class="service__swiper service-swiper">
             <div class="swiper js-service-swiper">
               <ul class="swiper-wrapper service__items">
@@ -444,10 +446,10 @@
                       <img src="src/assets/img/access/train_icon.png" alt="電車" />
                     </div>
                     <div class="access__info-item-text">
-                      <p class="access__info-item-text-title">●電車でお越しのお客様</p>
+                      <p class="access__info-item-text-title"><small>●</small>電車でお越しのお客様</p>
                       <p class="access__info-item-text-content">
                         大阪メトロ長堀鶴見緑地線 <br />
-                        「今福鶴見」駅 2番出口から 徒歩 約 5 分（約400m）
+                        「今福鶴見」駅 2番出口から<br class="is-pc"> 徒歩 約 <strong>5</strong> 分（約400m）
                       </p>
                     </div>
                   </li>
@@ -457,10 +459,10 @@
                       <img src="src/assets/img/access/bus_icon.png" alt="バス" />
                     </div>
                     <div class="access__info-item-text">
-                      <p class="access__info-item-text-title">●バスでお越しのお客様</p>
+                      <p class="access__info-item-text-title"><small>●</small>バスでお越しのお客様</p>
                       <p class="access__info-item-text-content">
                         大阪市営バス <br />
-                        「今福大橋」停留所から 徒歩 約 3 分（約300m）
+                        「今福大橋」停留所から<br class="is-pc"> 徒歩 約 <strong>3</strong> 分（約300m）
                       </p>
                     </div>
                   </li>
@@ -470,7 +472,7 @@
                 <a href="#" class="">
                   <h2>
                     <span class="s">お問い合わせはこちら</span>
-                    <span class="l"> 03-1234-5678 </span>
+                    <span class="l">09-6991-8829</span>
                   </h2>
                 </a>
               </div>
@@ -483,9 +485,11 @@
         <div class="footer__inner inner">
           <div class="footer__wrap">
             <div class="footer__logo">
-              <a href="">
-                <img src="src/assets/img/common/logo.png" alt="ロゴ" />
-              </a>
+              <div class="footer__logo-img">
+                <a href="#">
+                  <img src="src/assets/img/common/logo.png" alt="ロゴ" />
+                </a>
+              </div>
               <p class="footer__logo-text">
                 〒536-0002 <br />
                 大阪府大阪市城東区今福東1-7-5
@@ -493,12 +497,16 @@
             </div>
             <div class="footer__info">
               <div class="footer__business-hours">
-                <p class="footer__title">営業時間：</p>
-                <p class="footer__text">
-                  火曜日〜金曜日 10:00〜17:00<br />
+                <p class="footer__title">営業：</p>
+                <p class="footer__text">火曜日〜金曜日 10:00〜17:00<br />
+                  <span class="is-pc">
+                    <span>土曜日 09:00〜17:00</span>
+                    <br />
+                    <small>※パンがなくなり次第終了</small>
+                  </span>
                 </p>
               </div>
-              <div class="footer__business-hours">
+              <div class="footer__business-hours is-sp">
                 <p class="footer__title"></p>
                 <p class="footer__text">
                   <span>土曜日 09:00〜17:00</span>

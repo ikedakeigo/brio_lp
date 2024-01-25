@@ -11,8 +11,8 @@
   font-family: $font-family-02;
   &::before{
     content: "";
-    background-image: url(../img/service/service_bg.png);
-    background-size: contain;
+    background-image: url(../img/service/service_sp-bg.png);
+    background-size: 130% auto;
     background-position: top;
     background-repeat: no-repeat;
     position: absolute;
@@ -21,6 +21,12 @@
     left: 0;
     width: 100%;
     height: 100%;
+    @include mq(md){
+      content: "";
+      background-image: url(../img/service/service_bg.png);
+      background-size: contain;
+    }
+
   }
 }
 
@@ -28,6 +34,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   @include mq(md){
     width: per(1150, 1920);
   }
@@ -39,11 +46,16 @@
 }
 
 .service__swiper{
-
+  margin-top: rem(122);
+  margin-bottom: rem(120);
   @include mq(md){
     margin-top: rem(180);
     margin-bottom: rem(160);
   }
+}
+
+.service__inner{
+  padding: 0;
 }
 
 .service__item-img-box{
@@ -68,7 +80,6 @@
 }
 
 .service__item{
-  // width: rem(484);
   display: flex; /* フレックスボックスを使って内容を整理 */
   flex-direction: column; /* 縦方向に要素を並べる */
   justify-content: space-between; /* 内容を均等に分散 */
@@ -83,7 +94,11 @@
 .service__title{
   color: $color-white;
   text-align: center;
-
+  margin-top: rem(32);
+  span {
+    font-size:  rem(26);
+    line-height: calc(31 / 26);
+  }
   @include mq(md){
     margin-top: rem(70);
     span {
@@ -94,7 +109,9 @@
 }
 
 .service__subTitle{
-
+  font-size:  rem(14);
+  line-height: calc(17 / 14);
+  margin-bottom: rem(16);
   @include mq(md){
     margin-bottom: rem(26);
     font-size:  rem(23);
@@ -103,7 +120,8 @@
 }
 
 .service__price{
-
+  font-size:  rem(19);
+  line-height: calc(23 / 19);
   @include mq(md){
     font-size:  rem(33);
     line-height: calc(40 / 33);

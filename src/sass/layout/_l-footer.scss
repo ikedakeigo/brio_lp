@@ -1,0 +1,10 @@
+@use '../foundation' as *;
+
+.layout-footer {
+  padding-top: rem(43);
+  padding-bottom: rem(62);
+  @include mq(md){
+    padding-top: rem(60);
+    padding-bottom: rem(77);
+  }
+}

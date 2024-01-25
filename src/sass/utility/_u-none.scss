@@ -1,0 +1,15 @@
+@use "../foundation" as *;
+
+.is-sp {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.is-pc {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}
